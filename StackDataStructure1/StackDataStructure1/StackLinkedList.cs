@@ -23,5 +23,39 @@ namespace StackDataStructure1
             }
             Console.Write(" [" + node.data + "] →");
         }
+        // method to pop elements from stack
+        public void Pop()
+        {
+            if (top == null)
+            {
+                Console.WriteLine(" The Stack is Empty...");
+            }
+            else
+            {
+                Console.WriteLine("\n The Element at top [" + top.data + "] popped from the Stack.");
+                top = top.next;
+            }
+        }
+        public void Peak()
+        {
+            if (top == null)
+            {
+                Console.WriteLine(" The Stack is Empty... ");
+            }
+            else
+            {
+                Console.WriteLine("\n The Element [" + top.data + "] is at top of Stack.");
+            }
+        }
+
+        public void IsEmpty()
+        {
+            while (top != null)
+            {
+                Peak();
+                Pop();
+            }
+            Console.WriteLine(" Now the Stack is empty...");
+        }
     }
 }
