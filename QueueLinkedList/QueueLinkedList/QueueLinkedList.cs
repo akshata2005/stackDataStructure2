@@ -45,6 +45,18 @@ namespace QueueLinkedList
                 Console.Write("\t" + newNode.data);
             }
         }
+        public void Dequeue()
+        {
+            if (head == null)
+            {
+                Console.WriteLine(" Queue is Empty... ");
+            }
+            else
+            {
+                Console.WriteLine("\n Element [" + head.data + "] Removed from the Queue.");
+                head = head.next;
+            }
+        }
     }
 
 }

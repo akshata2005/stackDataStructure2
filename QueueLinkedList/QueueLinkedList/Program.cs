@@ -20,6 +20,9 @@ namespace QueueLinkedList
             //dispaly queue elements
             Console.Write(" Queue elements : [Top] →");
             llqueue.Display();
+            //remove first added element
+            llqueue.Dequeue();
+            llqueue.Display();
         }
     }
 }
